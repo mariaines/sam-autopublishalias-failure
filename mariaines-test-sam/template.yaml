@@ -5,6 +5,11 @@ Description: >
 
   Sample SAM Template for mariaines-test-sam
 
+Parameters:
+  Revision:
+    Type: String
+    Description: Description of the revision to deploy
+
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
@@ -17,6 +22,8 @@ Resources:
       CodeUri: src/
       Handler: app.lambda_handler
       Runtime: python3.8
+      AutoPublishAlias: live
+      VersionDescription: !Ref Revision
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
