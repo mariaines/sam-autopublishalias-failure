@@ -8,4 +8,4 @@ s3_prefix = "mariaines-test-sam"
 region = "us-west-2"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "Revision=\"1\""
+parameter_overrides = "Revision=\"2\""
